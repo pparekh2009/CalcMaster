@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m7X-v5-wc7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HdL-r7-Vdg">
+            <objects>
+                <viewController storyboardIdentifier="CalculatorId" id="m7X-v5-wc7" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eN6-co-RdX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3XK-wi-ZLT">
+                                <rect key="frame" x="20" y="376.66666666666674" width="353" height="443.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-VM-jbZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="80.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-63-86h" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80.670000000000002" id="hyR-w1-NGp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clear:" destination="m7X-v5-wc7" eventType="touchUpInside" id="tUI-fM-Mwn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-7f-TGo" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="setPosNeg:" destination="m7X-v5-wc7" eventType="touchUpInside" id="cfb-bq-73f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZU-nf-qjw" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcPercent:" destination="m7X-v5-wc7" eventType="touchUpInside" id="zne-2s-mDr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdW-I1-Pba" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="divide:" destination="m7X-v5-wc7" eventType="touchUpInside" id="5z4-bf-1XW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NPI-YG-4bq">
+                                        <rect key="frame" x="0.0" y="90.666666666666629" width="353" height="80.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQH-Pe-lXB" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="K3G-3h-uoO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-wY-WxQ" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="mp0-0u-Mll"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgC-OH-lK9" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="rdg-a5-Zfn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S67-bK-m3B" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="multiply:" destination="m7X-v5-wc7" eventType="touchUpInside" id="8Tf-GZ-fnb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i7g-DC-PYY">
+                                        <rect key="frame" x="0.0" y="181.33333333333331" width="353" height="80.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6n-Fz-CNO" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="0Rb-Jq-NcP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhq-y1-pEy" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="mC9-re-6Jf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-Vl-fQX" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="YR7-tH-VFn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-WC-2sG" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="subtract:" destination="m7X-v5-wc7" eventType="touchUpInside" id="hYA-sa-iA4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D99-Uj-AL8">
+                                        <rect key="frame" x="0.0" y="271.99999999999994" width="353" height="80.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XH4-a8-qYZ" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="1LI-93-TFQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-JK-A44" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="uXe-OF-955"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TK-Js-wvF" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="MeT-Vk-Kca"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-yC-6Lr" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="add:" destination="m7X-v5-wc7" eventType="touchUpInside" id="ZNx-82-f2g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="adU-Fd-ckf">
+                                        <rect key="frame" x="0.0" y="362.66666666666669" width="353" height="80.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbG-6g-b8t" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="111" id="ZCg-6Y-Agu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="writeNumber:" destination="m7X-v5-wc7" eventType="touchUpInside" id="MEZ-h9-s6s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzi-BV-KWN" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="121" y="0.0" width="111" height="80.666666666666671"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addDecimal:" destination="m7X-v5-wc7" eventType="touchUpInside" id="HNu-dL-vhe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ky-gN-ZDb" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="242" y="0.0" width="111" height="80.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="equals:" destination="m7X-v5-wc7" eventType="touchUpInside" id="wU1-Qg-Ums"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PbG-6g-b8t" firstAttribute="leading" secondItem="adU-Fd-ckf" secondAttribute="leading" id="49l-cB-0xl"/>
+                                            <constraint firstItem="Xzi-BV-KWN" firstAttribute="leading" secondItem="PbG-6g-b8t" secondAttribute="trailing" constant="10" id="EHC-Hj-4ob"/>
+                                            <constraint firstAttribute="trailing" secondItem="7ky-gN-ZDb" secondAttribute="trailing" id="R0V-Ua-5O4"/>
+                                            <constraint firstItem="7ky-gN-ZDb" firstAttribute="leading" secondItem="Xzi-BV-KWN" secondAttribute="trailing" constant="10" id="khs-q9-6Cs"/>
+                                            <constraint firstItem="Xzi-BV-KWN" firstAttribute="leading" secondItem="PbG-6g-b8t" secondAttribute="trailing" constant="10" id="sSp-FT-3UZ"/>
+                                            <constraint firstItem="7ky-gN-ZDb" firstAttribute="leading" secondItem="Xzi-BV-KWN" secondAttribute="trailing" constant="10" id="ybb-NP-swU"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="adU-Fd-ckf" firstAttribute="top" secondItem="D99-Uj-AL8" secondAttribute="bottom" constant="10" id="0oY-6R-joR"/>
+                                    <constraint firstItem="adU-Fd-ckf" firstAttribute="leading" secondItem="3XK-wi-ZLT" secondAttribute="leading" id="5um-8T-5rP"/>
+                                    <constraint firstAttribute="trailing" secondItem="adU-Fd-ckf" secondAttribute="trailing" id="7Nk-16-RDT"/>
+                                    <constraint firstAttribute="trailing" secondItem="dHw-VM-jbZ" secondAttribute="trailing" id="EKc-iB-poP"/>
+                                    <constraint firstAttribute="trailing" secondItem="i7g-DC-PYY" secondAttribute="trailing" id="ET5-Eq-HsN"/>
+                                    <constraint firstItem="NPI-YG-4bq" firstAttribute="top" secondItem="dHw-VM-jbZ" secondAttribute="bottom" constant="10" id="KRP-Nh-uKi"/>
+                                    <constraint firstItem="dHw-VM-jbZ" firstAttribute="leading" secondItem="3XK-wi-ZLT" secondAttribute="leading" id="Scr-hA-pkR"/>
+                                    <constraint firstItem="D99-Uj-AL8" firstAttribute="leading" secondItem="3XK-wi-ZLT" secondAttribute="leading" id="VJQ-lV-hNh"/>
+                                    <constraint firstAttribute="bottom" secondItem="adU-Fd-ckf" secondAttribute="bottom" id="cbG-3A-DCR"/>
+                                    <constraint firstItem="NPI-YG-4bq" firstAttribute="leading" secondItem="3XK-wi-ZLT" secondAttribute="leading" id="fqU-cA-pBs"/>
+                                    <constraint firstItem="i7g-DC-PYY" firstAttribute="top" secondItem="NPI-YG-4bq" secondAttribute="bottom" constant="10" id="j0S-Ij-DSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="D99-Uj-AL8" secondAttribute="trailing" id="nLb-wY-2KK"/>
+                                    <constraint firstAttribute="trailing" secondItem="NPI-YG-4bq" secondAttribute="trailing" id="o3s-GF-4cZ"/>
+                                    <constraint firstItem="D99-Uj-AL8" firstAttribute="top" secondItem="i7g-DC-PYY" secondAttribute="bottom" constant="10" id="tuV-Ak-xMY"/>
+                                    <constraint firstItem="i7g-DC-PYY" firstAttribute="leading" secondItem="3XK-wi-ZLT" secondAttribute="leading" id="vEw-rD-BjC"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-hs-qSu">
+                                <rect key="frame" x="261" y="142" width="112" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="qBJ-dC-Wde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NaW-N8-ESz"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3XK-wi-ZLT" firstAttribute="leading" secondItem="NaW-N8-ESz" secondAttribute="leading" constant="20" id="IIC-7d-x6C"/>
+                            <constraint firstItem="pTQ-hs-qSu" firstAttribute="top" secondItem="NaW-N8-ESz" secondAttribute="top" constant="83" id="TAe-b7-szi"/>
+                            <constraint firstAttribute="bottom" secondItem="3XK-wi-ZLT" secondAttribute="bottom" constant="32" id="UTl-Rz-BxG"/>
+                            <constraint firstItem="NaW-N8-ESz" firstAttribute="trailing" secondItem="3XK-wi-ZLT" secondAttribute="trailing" constant="20" id="iZE-gm-r7E"/>
+                            <constraint firstItem="NaW-N8-ESz" firstAttribute="trailing" secondItem="pTQ-hs-qSu" secondAttribute="trailing" constant="20" id="t4x-41-wa7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lRo-25-6wx"/>
+                    <connections>
+                        <outlet property="btnAC" destination="WXC-63-86h" id="VBa-WB-zk0"/>
+                        <outlet property="btnAdd" destination="MTY-yC-6Lr" id="Lyr-qX-EjJ"/>
+                        <outlet property="btnDecimal" destination="Xzi-BV-KWN" id="rkv-TD-oLL"/>
+                        <outlet property="btnDivide" destination="fdW-I1-Pba" id="sLP-bq-ABL"/>
+                        <outlet property="btnEight" destination="Lhk-wY-WxQ" id="YUB-8X-CYc"/>
+                        <outlet property="btnEquals" destination="7ky-gN-ZDb" id="iRe-Nv-7ak"/>
+                        <outlet property="btnFive" destination="hhq-y1-pEy" id="l34-r4-JS5"/>
+                        <outlet property="btnFour" destination="Z6n-Fz-CNO" id="Qsd-T0-45B"/>
+                        <outlet property="btnMultiply" destination="S67-bK-m3B" id="0sN-fF-28A"/>
+                        <outlet property="btnNine" destination="NgC-OH-lK9" id="GGB-oU-DH5"/>
+                        <outlet property="btnOne" destination="XH4-a8-qYZ" id="lbg-45-vUS"/>
+                        <outlet property="btnPercent" destination="HZU-nf-qjw" id="v1h-ms-SUk"/>
+                        <outlet property="btnPosNeg" destination="Zhc-7f-TGo" id="I2Q-6m-niu"/>
+                        <outlet property="btnSeven" destination="mQH-Pe-lXB" id="sN8-mF-fHi"/>
+                        <outlet property="btnSix" destination="Wlo-Vl-fQX" id="hHF-0K-epc"/>
+                        <outlet property="btnSubtract" destination="IH0-WC-2sG" id="RdE-Ou-vN2"/>
+                        <outlet property="btnThree" destination="9TK-Js-wvF" id="aNV-dd-nr6"/>
+                        <outlet property="btnTwo" destination="hcL-JK-A44" id="bvE-hb-k4c"/>
+                        <outlet property="btnZero" destination="PbG-6g-b8t" id="ydv-2H-X7j"/>
+                        <outlet property="resultLabel" destination="pTQ-hs-qSu" id="P0G-0e-Blw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUN-Pv-JNH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="-22"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="7ky-gN-ZDb">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="9TK-Js-wvF">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="HZU-nf-qjw">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="IH0-WC-2sG">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="Lhk-wY-WxQ">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="MTY-yC-6Lr">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="NgC-OH-lK9">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="PbG-6g-b8t">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="S67-bK-m3B">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="WXC-63-86h">
+            <size key="intrinsicContentSize" width="46" height="53"/>
+        </designable>
+        <designable name="Wlo-Vl-fQX">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="XH4-a8-qYZ">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="Xzi-BV-KWN">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="Z6n-Fz-CNO">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="Zhc-7f-TGo">
+            <size key="intrinsicContentSize" width="48" height="53"/>
+        </designable>
+        <designable name="fdW-I1-Pba">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="hcL-JK-A44">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="hhq-y1-pEy">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="mQH-Pe-lXB">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

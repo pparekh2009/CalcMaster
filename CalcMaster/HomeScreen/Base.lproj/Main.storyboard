@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VlK-3u-HPF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UqW-2g-6DT">
+            <objects>
+                <viewController id="4eE-Ja-5pO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jx0-BM-VbL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbD-Ib-Xca">
+                                <rect key="frame" x="145.66666666666666" y="553" width="102" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calculator"/>
+                                <connections>
+                                    <segue destination="y46-10-i4R" kind="show" id="uvb-Df-cUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-k9-NBY">
+                                <rect key="frame" x="110" y="643" width="174" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Currency Convertor"/>
+                                <connections>
+                                    <segue destination="qTT-0h-veO" kind="show" id="S0l-EJ-3bq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tx-My-H3G">
+                                <rect key="frame" x="128.66666666666666" y="447" width="135.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Unit Convertor"/>
+                                <connections>
+                                    <segue destination="s82-xP-ocd" kind="show" id="PxV-zI-54e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zqC-D5-bJC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cbD-Ib-Xca" firstAttribute="top" secondItem="5Tx-My-H3G" secondAttribute="bottom" constant="71" id="T1z-J4-7Nq"/>
+                            <constraint firstItem="cbD-Ib-Xca" firstAttribute="centerX" secondItem="zqC-D5-bJC" secondAttribute="centerX" id="dVv-hR-lGj"/>
+                            <constraint firstItem="5Tx-My-H3G" firstAttribute="centerX" secondItem="zqC-D5-bJC" secondAttribute="centerX" id="oVm-EY-O3d"/>
+                            <constraint firstItem="5Tx-My-H3G" firstAttribute="top" secondItem="zqC-D5-bJC" secondAttribute="top" constant="344" id="uJc-HU-odi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XSK-Br-r3J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iO2-yY-jnr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-21"/>
+        </scene>
+        <!--CalculatorId-->
+        <scene sceneID="FnL-jT-BlS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calculator" referencedIdentifier="CalculatorId" id="y46-10-i4R" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6CD-3s-vWw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBd-j4-5hI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="-21"/>
+        </scene>
+        <!--CurrencyConverterId-->
+        <scene sceneID="Ru3-Qy-2bl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CurrencyConverter" referencedIdentifier="CurrencyConverterId" id="qTT-0h-veO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GsC-Ur-3W5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOM-SU-68j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144" y="15"/>
+        </scene>
+        <!--UCCategoryId-->
+        <scene sceneID="ebX-E9-QnW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UCCategory" referencedIdentifier="UCCategoryId" id="s82-xP-ocd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hPC-NX-oiV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67S-IU-iC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176" y="-56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YHs-bK-ycm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VlK-3u-HPF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nF4-r9-See">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4eE-Ja-5pO" kind="relationship" relationship="rootViewController" id="BC1-nb-DYc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EqF-z8-HH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-676" y="-21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
